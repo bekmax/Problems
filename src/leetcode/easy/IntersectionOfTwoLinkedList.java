@@ -12,6 +12,7 @@ public class IntersectionOfTwoLinkedList {
     public static void main(String[] args) {
 
         Solution1 solution1 = new Solution1();
+        // Test can be implemented here
     }
 
     public class ListNode {
