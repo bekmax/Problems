@@ -15,10 +15,9 @@ import java.util.Map;
 public class TwoSum {
     public static void main(String[] args) {
 
-        TwoSum twoSum = new TwoSum();
-        TwoSum.Solution1 solution1 = twoSum.new Solution1();
-        TwoSum.Solution2 solution2 = twoSum.new Solution2();
-        TwoSum.Solution3 solution3 = twoSum.new Solution3();
+        Solution1 solution1 = new Solution1();
+        Solution2 solution2 = new Solution2();
+        Solution3 solution3 = new Solution3();
 
         int[] arr = {2, 7, 11, 15};
         int target = 9;
@@ -36,7 +35,7 @@ public class TwoSum {
     }
 
     // Time Complexity: O(N*N), Space complexity: O(1)
-    class Solution1 {
+    static class Solution1 {
         public int[] twoSum(int[] nums, int target) {
             for (int i = 0; i < nums.length - 1; i++) {
                 for (int j = i + 1; j < nums.length; j++) {
@@ -50,7 +49,7 @@ public class TwoSum {
     }
 
     // Time Complexity: O(N*LogN), Space complexity: O(1)
-    class Solution2 {
+    static class Solution2 {
         public int[] twoSum(int[] nums, int target) {
             Arrays.sort(nums);
             int headPointer = 0;
@@ -69,7 +68,7 @@ public class TwoSum {
     }
 
     // Time complexity: O(N), Space complexity: O(N)
-    class Solution3 {
+    static class Solution3 {
         public int[] twoSum(int[] nums, int target) {
             Map<Integer, Integer> map = new HashMap<>();
 

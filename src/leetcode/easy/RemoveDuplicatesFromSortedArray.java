@@ -17,15 +17,14 @@ package leetcode.easy;
 public class RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {
 
-        RemoveDuplicatesFromSortedArray rdfsa = new RemoveDuplicatesFromSortedArray();
-        Solution solution = rdfsa.new Solution();
+        Solution solution = new Solution();
 
         int[] arr = {1,1,1,1,2,2,3,4,5,6,7,8,8,9};
 
         System.out.println(solution.removeDuplicates(arr));
     }
 
-    class Solution {
+    static class Solution {
         public int removeDuplicates(int[] nums) {
             if (nums.length == 0) {
                 return 0;

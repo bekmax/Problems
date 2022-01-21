@@ -10,20 +10,30 @@ package leetcode.easy;
 public class MergeTwoSortedList {
     public static void main(String[] args) {
 
-        MergeTwoSortedList mtsl = new MergeTwoSortedList();
-        Solution1 solution1 = mtsl.new Solution1();
-        Solution2 solution2 = mtsl.new Solution2();
+        Solution1 solution1 = new Solution1();
+        Solution2 solution2 = new Solution2();
 
-        ListNode list1 = mtsl.new ListNode(1);
-        list1.next = mtsl.new ListNode(2);
-        list1.next.next = mtsl.new ListNode(4);
+        ListNode list1 = new ListNode(1);
+        list1.next = new ListNode(2);
+        list1.next.next = new ListNode(4);
 
-        ListNode list2 = mtsl.new ListNode(1);
-        list2.next = mtsl.new ListNode(3);
-        list2.next.next = mtsl.new ListNode(4);
+        ListNode list2 = new ListNode(1);
+        list2.next = new ListNode(3);
+        list2.next.next = new ListNode(4);
 
-        ListNode result = solution2.mergeTwoLists(list1,list2);
-        printList(result);
+        ListNode result1 = solution1.mergeTwoLists(list1,list2);
+        printList(result1);
+
+        ListNode list3 = new ListNode(1);
+        list3.next = new ListNode(2);
+        list3.next.next = new ListNode(4);
+
+        ListNode list4 = new ListNode(1);
+        list4.next = new ListNode(3);
+        list4.next.next = new ListNode(4);
+
+        ListNode result2 = solution2.mergeTwoLists(list3,list4);
+        printList(result2);
 
     }
 
@@ -36,7 +46,7 @@ public class MergeTwoSortedList {
     }
 
     //    Definition for singly-linked list.
-    public class ListNode {
+    static class ListNode {
         int val;
         ListNode next;
 
@@ -52,7 +62,7 @@ public class MergeTwoSortedList {
     }
 
     // Iterative approach
-    class Solution1 {
+    static class Solution1 {
         public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
             ListNode temp = new ListNode(-1);
             ListNode head = temp;
@@ -75,7 +85,7 @@ public class MergeTwoSortedList {
     }
 
     // Recursive approach
-    class Solution2 {
+    static class Solution2 {
         public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
             if (list1 == null) return list2;
             if (list2 == null) return list1;

@@ -9,15 +9,14 @@ package leetcode.easy;
 public class PalindromeNumber {
     public static void main(String[] args) {
 
-        PalindromeNumber pn = new PalindromeNumber();
-        Solution1 solution1 = pn.new Solution1();
-        Solution2 solution2 = pn.new Solution2();
+        Solution1 solution1 = new Solution1();
+        Solution2 solution2 = new Solution2();
 
         System.out.println(solution1.isPalindrome(222));
         System.out.println(solution2.isPalindrome(123));
     }
 
-    class Solution1 {
+    static class Solution1 {
         public boolean isPalindrome(int x) {
             if (x < 0) {
                 return false;
@@ -36,7 +35,7 @@ public class PalindromeNumber {
         }
     }
 
-    class Solution2 {
+    static class Solution2 {
         public boolean isPalindrome(int x){
             String s = Integer.toString(x);
             int headIndex = 0;

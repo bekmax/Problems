@@ -14,8 +14,7 @@ package leetcode.easy;
 public class ImplementStrStr {
     public static void main(String[] args) {
 
-        ImplementStrStr iss = new ImplementStrStr();
-        Solution solution = iss.new Solution();
+        Solution solution = new Solution();
 
         String haystack = "hello";
         String needle = "ll";
@@ -23,7 +22,7 @@ public class ImplementStrStr {
         System.out.println(solution.strStr(haystack, needle));
     }
 
-    class Solution {
+    static class Solution {
         public int strStr(String haystack, String needle) {
             if (haystack == null || needle == null || needle.length() > haystack.length()) {
                 return -1;
