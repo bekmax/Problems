@@ -41,4 +41,24 @@ public class HowManyNumbersAreSmallerThanTheCurrentNumber {
             return result;
         }
     }
+
+    static class Solution2 {
+        public int[] smallerNumbersThanCurrent(int[] nums) {
+            int[] arr = new int[nums.length];
+
+            int[] numberCounts = new int[101];
+
+            for(int i=0; i<nums.length; i++){
+                numberCounts[nums[i]]++;
+            }
+
+            for(int i=0; i<nums.length; i++){
+                for(int j=nums[i]-1; j>=0; j--){
+                    arr[i] += numberCounts[j];
+                }
+            }
+
+            return arr;
+        }
+    }
 }
